@@ -1,19 +1,35 @@
-## Hi there 👋
+# Tanay Venkata
 
-- 🌱 I’m currently learning github
+### 💼 Growth Ventures @ BNY Mellon  
+🎓 Finance & Behavioral Science @ Carnegie Mellon
 
+---
 
-<!--
-**tanayvenkata/tanayvenkata** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🚧 What I’m Working On
 
-Here are some ideas to get you started:
+| Area              | Status          | Notes                             |
+|-------------------|-----------------|-----------------------------------|
+| 🐍 Python          | 🛠 Active       | Exercism, side projects, oop, dsa |
+| 🐧 Linux | 🌌 Customizing  | i3, transparency, shell scripts    |
+| 📊 Data Science    | 🌱 Building     | NumPy, pandas, regressions         |
+| 💻 C Programming   | 📘 Learning     | Low-level fundamentals             |
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🗂️ Featured Projects
+
+### 📊 Data Science
+- [Weather Data Analyzer](#) – Real-time weather regression + viz
+- [World Bank Project](#) – Cross-country indicator exploration
+
+### 🎲 Game Dev
+- [Hangman CLI Game](#)
+- [Monopoly Engine (WIP)](#)
+
+### 🧰 Tools
+- [Python OOP Exercises](#)
+- [Linux dotfiles (coming soon)](#)
+
+---
+
+> “Slowly, then all at once.”
