@@ -41,5 +41,3 @@
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=tanayvenkata&layout=compact&theme=radical)
 
 ---
-
-> “Slowly, then all at once.”
