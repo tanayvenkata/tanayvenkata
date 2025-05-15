@@ -26,7 +26,7 @@
 
 ### 🎲 Game Dev
 - [Number Guessing Game](https://github.com/tanayvenkata/number-guessing-game)
-- *Monopoly Engine* — *(in progress)*
+- [Monopoly CLI Game](https://github.com/tanayvenkata/monopoly-cli) - *(in progress)*
 
 ### 🧰 Tools & Exercises
 - [Python OOP](https://github.com/tanayvenkata/python-oop)
