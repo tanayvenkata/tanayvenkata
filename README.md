@@ -2,7 +2,7 @@
 
 # Tanay Venkata
 
-### 💼 Growth Ventures @ BNY Mellon  
+### 💼 Growth Ventures @ BNY  
 🎓 Finance & Behavioral Science @ Carnegie Mellon
 
 ---
