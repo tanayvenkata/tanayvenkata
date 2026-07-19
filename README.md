@@ -1,13 +1,27 @@
 # Tanay Venkata
 
-Building AI applications for finance and research workflows.
+I build applied AI products that connect models to real tools, data, and workflows.
+My projects tend to sit at the intersection of AI, finance, and systems engineering.
 
-[tanayvenkata.com](https://tanayvenkata.com) | [LinkedIn](https://linkedin.com/in/tanayvenkata)
+[Website](https://tanayvenkata.com) · [LinkedIn](https://linkedin.com/in/tanayvenkata)
 
-## Projects
+## Currently building
 
-**[Campaign Intel](https://github.com/tanayvenkata/campaign-intel)** — Multi-document RAG system for querying ~37K lines of focus group transcripts with hierarchical summarization and citation tracking.
+### [Mise](https://github.com/tanayvenkata/meal-prep)
 
-**[SEC Filing Analyzer](https://github.com/tanayvenkata/sec-risk-analysis)** — Temporal RAG application for comparing 10-K risk disclosures across companies and years, with semantic search over ~2,500 document chunks.
+A pantry-aware cooking assistant built with Next.js, TypeScript, Supabase, and
+Postgres. The current focus is turning Mise into a ChatGPT app backed by an MCP
+server, so the assistant can securely read and update a user's real kitchen
+context instead of relying on prompt-only memory.
 
-**[401k RAG Advisor](https://github.com/tanayvenkata/401k-rag)** — Hybrid RAG + text-to-SQL system for querying retirement plan documents and fund data in plain English.
+[Try the web app](https://meal-prep-tawny-kappa.vercel.app) · [Follow the public roadmap](https://github.com/users/tanayvenkata/projects/3)
+
+## Selected projects
+
+- **[FDA Guidance Diff](https://github.com/tanayvenkata/fda-guidance-diff)** — Semantic diffs for tracking changes in FDA regulatory guidance.
+- **[Campaign Intel](https://github.com/tanayvenkata/campaign-intel)** — Search and synthesis across large collections of political focus-group transcripts and strategy memos.
+- **[SEC Filing Analyzer](https://github.com/tanayvenkata/sec-risk-analysis)** — Compare how risk disclosures change across companies and reporting periods.
+- **[Hanabi](https://github.com/tanayvenkata/hanabi)** — Collaborative experiments in building AI agents for a cooperative, partially observable card game.
+
+I am learning in public: building in small, testable slices, writing down the
+tradeoffs, and keeping the source and roadmap open when I can.
