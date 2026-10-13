@@ -1,6 +1,8 @@
 # Tanay Venkata
 
-Building AI applications for finance and research workflows.
+<!-- TAGLINE:START -->
+Tanay Venkata builds software and writes essays.
+<!-- TAGLINE:END -->
 
 **[tanayv.com](https://tanayv.com)** · [LinkedIn](https://linkedin.com/in/tanayvenkata)
 
