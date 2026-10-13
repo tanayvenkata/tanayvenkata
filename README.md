@@ -1,10 +1,6 @@
 # Tanay Venkata
 
-<!-- TAGLINE:START -->
-Tanay Venkata builds software and writes essays.
-<!-- TAGLINE:END -->
-
-**[tanayv.com](https://tanayv.com)** · [LinkedIn](https://linkedin.com/in/tanayvenkata)
+[tanayv.com](https://tanayv.com) · [LinkedIn](https://linkedin.com/in/tanayvenkata)
 
 ### Recent builds
 
@@ -16,6 +12,4 @@ Tanay Venkata builds software and writes essays.
 - **[Campaign Intel](https://tanayv.com/campaign-intel)** — Searches thirty-seven focus-group transcripts from two election cycles by what was meant, not the words used, grouped by who was in the room.
 <!-- BUILDS:END -->
 
-[All builds and writing →](https://tanayv.com)
-
-<sub>Updated daily from tanayv.com</sub>
+**[See every build and essay at tanayv.com →](https://tanayv.com)**

@@ -1,37 +1,24 @@
-"""Rewrite the tagline and Recent builds blocks in README.md from tanayv.com."""
+"""Rewrite the Recent builds block in README.md from the tanayv.com feed."""
 
-import html
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-SITE = "https://tanayv.com"
-FEED = f"{SITE}/rss.xml"
+FEED = "https://tanayv.com/rss.xml"
 COUNT = 5
 README = Path(__file__).resolve().parents[2] / "README.md"
-
-
-def fetch(url: str) -> bytes:
-    req = urllib.request.Request(url, headers={"User-Agent": "tanayvenkata-readme"})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read()
+START, END = "<!-- BUILDS:START -->", "<!-- BUILDS:END -->"
 
 
 def escape(text: str) -> str:
     return re.sub(r"([\[\]])", r"\\\1", " ".join(text.split()))
 
 
-def tagline() -> list[str]:
-    page = fetch(SITE).decode()
-    match = re.search(r'<meta name="description" content="([^"]*)"', page)
-    if not match or not match.group(1).strip():
-        raise SystemExit("No description on the home page; leaving README alone.")
-    return [escape(html.unescape(match.group(1)))]
-
-
 def builds() -> list[str]:
-    root = ET.fromstring(fetch(FEED))
+    req = urllib.request.Request(FEED, headers={"User-Agent": "tanayvenkata-readme"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        root = ET.fromstring(resp.read())
     lines = []
     for item in root.iter("item"):  # the feed is newest first
         if "build" not in [c.text for c in item.findall("category")]:
@@ -49,20 +36,13 @@ def builds() -> list[str]:
     return lines
 
 
-def fill(text: str, name: str, lines: list[str]) -> str:
-    start, end = f"<!-- {name}:START -->", f"<!-- {name}:END -->"
-    block = "\n".join([start, *lines, end])
-    new, n = re.subn(re.escape(start) + r".*?" + re.escape(end), lambda _: block, text, flags=re.S)
-    if n != 1:
-        raise SystemExit(f"{name} markers not found in README.md.")
-    return new
-
-
 def main() -> None:
     text = README.read_text()
-    text = fill(text, "TAGLINE", tagline())
-    text = fill(text, "BUILDS", builds())
-    README.write_text(text)
+    block = "\n".join([START, *builds(), END])
+    new, n = re.subn(re.escape(START) + r".*?" + re.escape(END), lambda _: block, text, flags=re.S)
+    if n != 1:
+        raise SystemExit("Markers not found in README.md.")
+    README.write_text(new)
 
 
 if __name__ == "__main__":
