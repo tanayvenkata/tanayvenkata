@@ -7,16 +7,14 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: python .github/scripts/update_readme.py
+      - run: python3 .github/scripts/update_readme.py
       - name: Commit if changed
         run: |
           if git diff --quiet; then echo "No changes."; exit 0; fi
@@ -24,3 +22,9 @@ jobs:
           git config user.email "41898231+github-actions[bot]@users.noreply.github.com"
           git commit -am "Update recent builds from tanayv.com"
           git push
+      # GitHub disables scheduled workflows after 60 days without a commit; re-enabling keeps this one alive.
+      - name: Keep schedule alive
+        if: github.event_name == 'schedule'
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/update-readme.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
